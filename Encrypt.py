@@ -36,6 +36,6 @@ enc_dict = {
     "8":"o",#used
     "9":"p",#used
 }
-String file = input("Enter file name: ")
+String file_name = input("Enter file name: ") + ".txt"
 
-file = 
+file = open(file_name,"w")
