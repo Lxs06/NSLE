@@ -36,8 +36,13 @@ enc_dict = {
     "8":"o",#used
     "9":"p",#used
 }
-String file_name = input("Enter file name: ") + ".txt"
+String file_name = input("Enter file name: ")
 
-file = open(file_name,"w")
+file = open(file_name+".txt","r")
+new_file open(file_name+"_NSLE.txt","w")
 
-words = file.split()
+words = file.split(' ')
+
+for word in words:
+    for letter in word:
+        
