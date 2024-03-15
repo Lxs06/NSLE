@@ -46,9 +46,9 @@ new_file open(file_name+"_NSLE.txt","w")
 words = file.split(' ')
 
 for word in words:
-    for letter in word:
+    for char in word:
         try:
-            new_file.write(enc_dict.)
+            new_file.write(enc_dict[char])
         except:
             print("Error while encryption...")
             os.remove(file_name+"_NSLE.txt")
