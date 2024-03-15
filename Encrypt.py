@@ -1,4 +1,6 @@
 import os
+import time
+
 enc_dict = {
     "a":"7",#used
     "b":"5",#used
@@ -45,4 +47,10 @@ words = file.split(' ')
 
 for word in words:
     for letter in word:
-        
+        try:
+            new_file.write(enc_dict.)
+        except:
+            print("Error while encryption...")
+            os.remove(file_name+"_NSLE.txt")
+            time.sleep(5)
+            exit()
