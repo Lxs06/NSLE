@@ -39,3 +39,5 @@ enc_dict = {
 String file_name = input("Enter file name: ") + ".txt"
 
 file = open(file_name,"w")
+
+words = file.split()
