@@ -55,3 +55,8 @@ for word in words:
                 os.remove(file_name+"_NSLE.txt")
                 time.sleep(5)
                 exit()
+    else:
+        new_file.write("\n")
+
+new_file.close()
+file.close()
