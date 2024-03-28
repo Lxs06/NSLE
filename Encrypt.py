@@ -39,25 +39,25 @@ enc_dict = {
     "8":"i",#used
     "9":"a",#used
 }
-String file_name = input("Enter file name: ")
+
+file_name = input("Enter file name: ")
 
 file = open(file_name+".txt","r")
-new_file open(file_name+"_NSLE.txt","w")
-
-words = file.split(' ')
-
-for word in words:
-    if word != "\n":
-        for char in word:
-            try:
-                new_file.write(enc_dict[char])
-            except:
-                print("Error while encryption...")
-                os.remove(file_name+"_NSLE.txt")
-                time.sleep(5)
-                exit()
-    else:
-        new_file.write("\n")
-
+new_file = open(file_name+"_NSLE.txt","w")
+lines = file.readlines()
+for line in lines:
+    words = line.split(' ')
+    for word in words:
+        if word != "\n":
+            for char in word:
+                try:
+                    new_file.write(enc_dict[char])
+                except:
+                    print("Error while encryption...")
+                    os.remove(file_name+"_NSLE.txt")
+                    time.sleep(5)
+                    exit()
+        else:
+            new_file.write("\n")
 new_file.close()
 file.close()
