@@ -1,6 +1,6 @@
 import os
 enc_dict = {
-    "a":"w",#used
+    "a":"#",#used
     "b":"0",#used
     "c":"v",#used
     "d":"4",#used
@@ -14,19 +14,19 @@ enc_dict = {
     "l":"o",#double
     "m":"t",
     "n":"p",#used
-    "o":";",#used
+    "o":";",#DONE
     "p":"f",#used
-    "q":"2",#used
+    "q":"/",#DONE
     "r":"n",#used
     "f":"m",#used
     "t":"x",#used
     "u":"f",#used
     "v":"5",#used
     "w":"l",#used
-    "x":"{",#used
+    "x":"{",#DONE
     "y":"1",#used
     "z":"b",#used
-    "0":".",#used
+    "0":".",#DONE
     "1":"e",#used
     "2":"h",#used
     "3":"r",#used
@@ -35,13 +35,13 @@ enc_dict = {
     "6":"j",
     "7":"q",
     "8":"i",
-    "9":" ",
-    " ":"a",
-    ".":"g",
+    "9":" ",#DONE
+    " ":"a",#DONE
+    ".":"g",#DONE
     ",":"",
-    ";":"c",
+    ";":"c",#DONE
     ":":"",
-    "{":"7",
+    "{":"7",#DONE
     "}":"",
     "[":"",
     "]":"",
@@ -49,15 +49,16 @@ enc_dict = {
     ")":"",
     "&":"",
     "@":"",
-    "#":"",
+    "#":"w",
     "!":"",
     "?":"",
     "-":"",
     "+":"",
     "=":"",
     "*":"",
-    "/":"",
+    "/":"2",#DONE
 }
+# ^ means next letter is capital letter
 file_name = input("Enter file name: ")
 file = open(file_name+".txt","r")
 new_file = open(file_name+"_NSLE.txt","w")
@@ -68,7 +69,11 @@ for line in lines:
         if word != "\n":
             for char in word:
                 try:
-                    new_file.write(enc_dict[char])
+                    if char.islower:
+                        new_file.write(enc_dict[char])
+                    else:
+                        new_file.write("^")
+                        new_file.write(enc_dict[char])
                 except:
                     print("Error while encryption...")
                     os.remove(file_name+"_NSLE.txt")
