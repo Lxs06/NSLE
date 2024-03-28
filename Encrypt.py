@@ -2,41 +2,42 @@ import os
 import time
 
 enc_dict = {
-    "a":"7",#used
-    "b":"5",#used
-    "c":"j",#used
-    "d":"i",#used
-    "e":"w",
-    "f":"e",#used
-    "g":"0",#used
-    "h":"c",#used
-    "i":"x",
-    "k":"z",
-    "l":"u",#double
-    "m":"1",
-    "n":"d",#used
-    "o":"k",#used
-    "p":"2",#used
-    "q":"h",#used
-    "r":"m",#used
-    "f":"4",#used
-    "t":"s",#used
-    "u":"3",#used
-    "v":"b",#used
-    "w":"n",#used
-    "x":"l",#used
-    "y":"a",#used
-    "z":"g",#used
-    "0":"t",#used
-    "1":"f",#used
-    "2":"8",#used
+    "a":"w",#used
+    "b":"0",#used
+    "c":"v",#used
+    "d":"4",#used
+    "e":"u",
+    "f":"8",#used
+    "g":"6",#used
+    "h":"3",#used
+    "i":"z",
+    "j":"9",
+    "k":"y",
+    "l":"o",#double
+    "m":"t",
+    "n":"p",#used
+    "o":"c",#used
+    "p":"f",#used
+    "q":"2",#used
+    "r":"n",#used
+    "f":"m",#used
+    "t":"x",#used
+    "u":"f",#used
+    "v":"5",#used
+    "w":"l",#used
+    "x":"7",#used
+    "y":"1",#used
+    "z":"b",#used
+    "0":"g",#used
+    "1":"e",#used
+    "2":"h",#used
     "3":"r",#used
-    "4":"9",#used
-    "5":"6",#used
-    "6":"q",#used
-    "7":"y",
-    "8":"o",#used
-    "9":"p",#used
+    "4":"d",#used
+    "5":"k",#used
+    "6":"j",#used
+    "7":"q",
+    "8":"i",#used
+    "9":"a",#used
 }
 String file_name = input("Enter file name: ")
 
