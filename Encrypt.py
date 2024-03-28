@@ -58,7 +58,7 @@ enc_dict = {
     "*":"",
     "/":"2",#DONE
 }
-# ^ means next letter is capital letter
+# '^' means next letter is capital letter
 file_name = input("Enter file name: ")
 file = open(file_name+".txt","r")
 new_file = open(file_name+"_NSLE.txt","w")
