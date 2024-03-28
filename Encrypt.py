@@ -1,6 +1,4 @@
 import os
-import time
-
 enc_dict = {
     "a":"w",#used
     "b":"0",#used
@@ -16,7 +14,7 @@ enc_dict = {
     "l":"o",#double
     "m":"t",
     "n":"p",#used
-    "o":"c",#used
+    "o":";",#used
     "p":"f",#used
     "q":"2",#used
     "r":"n",#used
@@ -25,28 +23,47 @@ enc_dict = {
     "u":"f",#used
     "v":"5",#used
     "w":"l",#used
-    "x":"7",#used
+    "x":"{",#used
     "y":"1",#used
     "z":"b",#used
-    "0":"g",#used
+    "0":".",#used
     "1":"e",#used
     "2":"h",#used
     "3":"r",#used
     "4":"d",#used
     "5":"k",#used
-    "6":"j",#used
+    "6":"j",
     "7":"q",
-    "8":"i",#used
-    "9":"a",#used
+    "8":"i",
+    "9":" ",
+    " ":"a",
+    ".":"g",
+    ",":"",
+    ";":"c",
+    ":":"",
+    "{":"7",
+    "}":"",
+    "[":"",
+    "]":"",
+    "(":"",
+    ")":"",
+    "&":"",
+    "@":"",
+    "#":"",
+    "!":"",
+    "?":"",
+    "-":"",
+    "+":"",
+    "=":"",
+    "*":"",
+    "/":"",
 }
-
 file_name = input("Enter file name: ")
-
 file = open(file_name+".txt","r")
 new_file = open(file_name+"_NSLE.txt","w")
 lines = file.readlines()
 for line in lines:
-    words = line.split(' ')
+    words = line.split('')
     for word in words:
         if word != "\n":
             for char in word:
